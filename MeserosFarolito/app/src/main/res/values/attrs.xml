@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TableView">
+        <attr name="tableID" format="integer"/>
+        <attr name="tableStyle" format="enum">
+            <enum name="style1" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>
