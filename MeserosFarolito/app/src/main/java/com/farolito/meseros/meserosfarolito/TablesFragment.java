@@ -66,16 +66,6 @@ public class TablesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_tables, container, false);
-
-        (v.findViewById(R.id.floatingActionButton))
-                .setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Log.d("MyLog", "onClick on listener");
-                        onButtonPressed(view);
-                    }
-                });
-
         return v;
     }
 

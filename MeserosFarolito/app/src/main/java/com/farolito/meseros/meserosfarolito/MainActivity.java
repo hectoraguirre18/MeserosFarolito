@@ -6,17 +6,23 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements TablesFragment.OnFragmentInteractionListener, WaitlistFragment.OnFragmentInteractionListener, AddingFragment.OnFragmentInteractionListener{
 
+    private float y1,y2;
+    static final int MIN_DISTANCE = 150;
+
     int state = 0;
 
     WaitlistFragment waitlistFragment;
 
     Boolean addingFragmentVisible = false;
+    Boolean waitlistFragmentVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +70,68 @@ public class MainActivity extends AppCompatActivity implements TablesFragment.On
             });
 
 
-        } else
+        } else {
+            if(waitlistFragmentVisible)
+                waitlistFragmentVisible = false;
             super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        switch(event.getAction())
+        {
+            case MotionEvent.ACTION_DOWN:
+                y1 = event.getY();
+                break;
+            case MotionEvent.ACTION_UP:
+                y2 = event.getY();
+                float deltaY = y2 - y1;
+                if (Math.abs(deltaY) > MIN_DISTANCE)
+                {
+                    if (y2 > y1)
+                    {
+                        if(waitlistFragmentVisible && !addingFragmentVisible){
+                            onBackPressed();
+                        }
+                    }
+
+                    // Right to left swipe action
+                    else
+                    {
+                        if(!waitlistFragmentVisible)
+                            openWaitlist();
+                    }
+                }
+                else
+                {
+                    // consider as something else - a screen tap for example
+                }
+                break;
+        }
+        return super.dispatchTouchEvent(event);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+
+        return super.onTouchEvent(event);
+    }
+
+    void openWaitlist(){
+        waitlistFragmentVisible = true;
+
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        android.support.v4.app.FragmentTransaction ft = fragmentManager.beginTransaction();
+
+        ft.setCustomAnimations(R.anim.enter_from_bottom, R.anim.enter_from_bottom
+                , R.anim.exit_to_bottom, R.anim.exit_to_bottom);
+        waitlistFragment = new WaitlistFragment();
+        ft.add(R.id.waitlist_container, waitlistFragment);
+        ft.addToBackStack(null);
+
+        ft.commit();
     }
 
     @Override
@@ -75,17 +141,6 @@ public class MainActivity extends AppCompatActivity implements TablesFragment.On
         android.support.v4.app.FragmentTransaction ft = fragmentManager.beginTransaction();
 
         switch (view.getId()) {
-
-            case R.id.floatingActionButton:
-
-                ft.setCustomAnimations(R.anim.enter_from_bottom, R.anim.enter_from_bottom
-                        , R.anim.exit_to_bottom, R.anim.exit_to_bottom);
-                waitlistFragment = new WaitlistFragment();
-                ft.add(R.id.waitlist_container, waitlistFragment);
-                ft.addToBackStack(null);
-
-                ft.commit();
-                break;
 
             case R.id.waitlist_fab:
                 if(addingFragmentVisible)
