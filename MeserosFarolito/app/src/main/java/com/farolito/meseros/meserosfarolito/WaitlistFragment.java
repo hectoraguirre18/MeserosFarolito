@@ -3,13 +3,19 @@ package com.farolito.meseros.meserosfarolito;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -20,6 +26,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,11 +37,13 @@ import android.widget.Toast;
  * Use the {@link WaitlistFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WaitlistFragment extends Fragment {
+public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    RecyclerView.LayoutManager mLayoutManager;
 
     private Waitlist_adapter mAdapter;
 
@@ -44,6 +54,8 @@ public class WaitlistFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View mView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -92,20 +104,27 @@ public class WaitlistFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_waitlist, container, false);
+        final View v = inflater.inflate(R.layout.fragment_waitlist, container, false);
         mAdapter = new Waitlist_adapter(getContext());
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
+        mLayoutManager = new LinearLayoutManager(getContext());
 
         RecyclerView mRecyclerView = (RecyclerView) v.findViewById(R.id.waitlist_recyclerview);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+
         mRecyclerView.setAdapter(mAdapter);
 
+        ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT, this);
+        new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(mRecyclerView);
         TextViewCount = (TextView) v.findViewById(R.id.count_tv);
 
         updateCounter();
+
+        mView = v.findViewById(R.id.waitlist_recyclerview);
 
         v.findViewById(R.id.waitlist_fab).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,8 +139,10 @@ public class WaitlistFragment extends Fragment {
         v.findViewById(R.id.addClient_btn_0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                v.findViewById(R.id.count_tv).requestFocus();
                 if(!TextUtils.isEmpty(client_count)){
-                    client_count = client_count + "0";
+                    if(client_count.length() < 2)
+                        client_count = client_count + "0";
                     updateCounter();
                 }
             }
@@ -129,63 +150,81 @@ public class WaitlistFragment extends Fragment {
         v.findViewById(R.id.addClient_btn_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "1";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "1";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "2";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "2";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "3";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "3";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "4";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "4";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "5";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "5";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "6";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "6";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "7";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "7";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_8).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "8";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "8";
                 updateCounter();
             }
         });
         v.findViewById(R.id.addClient_btn_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                client_count = client_count + "9";
+                v.findViewById(R.id.count_tv).requestFocus();
+                if(client_count.length() < 2)
+                    client_count = client_count + "9";
                 updateCounter();
             }
         });
@@ -193,6 +232,7 @@ public class WaitlistFragment extends Fragment {
         v.findViewById(R.id.addClient_btn_backspace).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                v.findViewById(R.id.count_tv).requestFocus();
                 if(!TextUtils.isEmpty(client_count)){
                     client_count = removeLastChar(client_count);
                 }
@@ -210,26 +250,32 @@ public class WaitlistFragment extends Fragment {
                     nameEditText.setError("Por favor introduzca un nombre");
                     nameEditText.requestFocus();
                 } else if(TextUtils.isEmpty(client_count)){
-                    Toast.makeText(getContext(), "Por favor introduzca un numero de personas", Toast.LENGTH_SHORT).show();
+
+                    ((EditText) v.findViewById(R.id.count_tv)).setError("Por favor introduzca un número de personas");
+                    v.findViewById(R.id.count_tv).requestFocus();
                 } else {
+                    v.findViewById(R.id.addClient_title).requestFocus();
+                    ((EditText) v.findViewById(R.id.count_tv)).setError(null);
 
                     int count = Integer.parseInt(client_count);
                     String name = nameEditText.getText().toString();
 
-                    WaitlistDBHelper mDbHelper = new WaitlistDBHelper(getContext());
-                    SQLiteDatabase db = mDbHelper.getWritableDatabase();
-
-                    ContentValues values = new ContentValues();
-                    values.put(WaitlistContract.WaitlistEntry.COLUMN_CLIENT_NAME, name);
-                    values.put(WaitlistContract.WaitlistEntry.COLUMN_CLIENT_COUNT, count);
-
-                    db.insert(WaitlistContract.WaitlistEntry.WAITLIST_TABLE_NAME, null, values);
-
                     nameEditText.setText("");
                     client_count = "";
                     updateCounter();
-                    updateList();
+
+                    Waitlist_adapter.Client client = new Waitlist_adapter.Client(name, count);
+                    int position = mAdapter.getClients().size();
+                    mAdapter.insertClient(client, position, mLayoutManager);
                 }
+            }
+        });
+
+        v.findViewById(R.id.count_tv).setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                v.findViewById(R.id.count_tv).requestFocus();
+                return true;
             }
         });
 
@@ -244,11 +290,10 @@ public class WaitlistFragment extends Fragment {
     }
 
     private void updateCounter(){
-        String auxString = getContext().getResources().getString(R.string.client_count);
-        if(TextUtils.isEmpty(client_count)){
-            TextViewCount.setText(auxString + " 0");
+        if (TextUtils.isEmpty(client_count)) {
+            TextViewCount.setText("0");
         } else {
-            TextViewCount.setText(auxString + " " + client_count);
+            TextViewCount.setText(client_count);
         }
     }
 
@@ -274,6 +319,32 @@ public class WaitlistFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
+        if(viewHolder instanceof Waitlist_adapter.waitlistViewHolder){
+            List<Waitlist_adapter.Client> clients = mAdapter.getClients();
+            String name = clients.get(viewHolder.getAdapterPosition()).name;
+
+            final Waitlist_adapter.Client deletedClient = clients.get(viewHolder.getAdapterPosition());
+            final int deletedIndex = viewHolder.getAdapterPosition();
+
+            mAdapter.removeClient(viewHolder.getAdapterPosition());
+
+            Snackbar snackbar = Snackbar
+                    .make(mView, name + " ha sido eliminado!", Snackbar.LENGTH_LONG);
+            snackbar.setAction("DESHACER", new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    // undo is selected, restore the deleted item
+                    mAdapter.restoreClient(deletedClient, deletedIndex);
+                }
+            });
+            snackbar.setActionTextColor(Color.YELLOW);
+            snackbar.show();
+        }
     }
 
     /**

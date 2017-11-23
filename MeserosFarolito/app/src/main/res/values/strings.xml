@@ -2,7 +2,8 @@
     <string name="app_name">Meseros Farolito</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="add_client">Añadir cliente</string>
+    <string name="add_client">☕ Añadir cliente ☕</string>
     <string name="client_name">Nombre</string>
     <string name="client_count">Numero de personas: </string>
+    <string name="delete">Eliminar</string>
 </resources>

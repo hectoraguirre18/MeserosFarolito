@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements TablesFragment.On
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        waitlistFragment = new WaitlistFragment();
+
         setContentView(R.layout.activity_main);
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
@@ -134,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements TablesFragment.On
 
         ft.setCustomAnimations(R.anim.enter_from_bottom, R.anim.enter_from_bottom
                 , R.anim.exit_to_bottom, R.anim.exit_to_bottom);
-        waitlistFragment = new WaitlistFragment();
         ft.add(R.id.waitlist_container, waitlistFragment);
         ft.addToBackStack(null);
 

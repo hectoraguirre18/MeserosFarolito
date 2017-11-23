@@ -10,5 +10,10 @@
     <color name="black">#000000</color>
     <color name="lightGray">#e9e9e9</color>
     <color name="veryLight_blue">#d7e6f5</color>
-    <color name="veryLight_orange">#dfffd0</color>
+    <color name="veryLight_green">#cdf2f0</color>
+    <color name="lighter_green">#b4ebe9</color>
+    <color name="light_green">#6ad8d4</color>
+    <color name="dark_green">#156b68</color>
+
+    <color name="bg_row_background">#fa315b</color>
 </resources>
