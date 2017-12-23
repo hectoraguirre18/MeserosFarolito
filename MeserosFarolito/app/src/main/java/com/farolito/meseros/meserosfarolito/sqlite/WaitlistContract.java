@@ -1,4 +1,4 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.sqlite;
 
 import android.provider.BaseColumns;
 

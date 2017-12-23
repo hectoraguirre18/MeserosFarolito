@@ -6,8 +6,13 @@
     android:background="@android:color/white"
     android:orientation="horizontal"
     android:padding="8dp"
-    tools:context="com.farolito.meseros.meserosfarolito.WaitlistFragment">
+    tools:context="com.farolito.meseros.meserosfarolito.fragments.WaitlistFragment">
 
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/focus_thief"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -239,7 +244,6 @@
                     android:paddingRight="12dp"
                     android:paddingEnd="12dp"
                     tools:text="0"
-                    android:inputType="number"
                     android:layout_gravity="center_vertical"
                     android:gravity="end"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
