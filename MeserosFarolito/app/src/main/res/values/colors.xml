@@ -15,5 +15,8 @@
     <color name="light_green">#6ad8d4</color>
     <color name="dark_green">#156b68</color>
 
+    <color name="wall_color">#156b68</color>
+    <color name="floor_color">#b4ebe9</color>
+
     <color name="bg_row_background">#fa315b</color>
 </resources>

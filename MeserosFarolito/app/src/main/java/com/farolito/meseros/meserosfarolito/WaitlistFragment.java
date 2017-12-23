@@ -1,9 +1,11 @@
 package com.farolito.meseros.meserosfarolito;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.sip.SipSession;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -34,14 +37,8 @@ import java.util.List;
  * Activities that contain this fragment must implement the
  * {@link WaitlistFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link WaitlistFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener{
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
     RecyclerView.LayoutManager mLayoutManager;
 
@@ -51,47 +48,20 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
 
     private String client_count = "";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private static final int MAX_DIGITS = 2;
 
-    private View mView;
+    private RecyclerView mRecyclerView;
 
     private OnFragmentInteractionListener mListener;
+
+    private EditText mFocusThief;
 
     public WaitlistFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment WaitlistFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static WaitlistFragment newInstance(String param1, String param2) {
-        WaitlistFragment fragment = new WaitlistFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     public void updateList(){
         mAdapter.updateData();
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -105,11 +75,13 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View v = inflater.inflate(R.layout.fragment_waitlist, container, false);
+        mFocusThief = v.findViewById(R.id.focus_thief);
+
         mAdapter = new Waitlist_adapter(getContext());
 
         mLayoutManager = new LinearLayoutManager(getContext());
 
-        RecyclerView mRecyclerView = (RecyclerView) v.findViewById(R.id.waitlist_recyclerview);
+        mRecyclerView = (RecyclerView) v.findViewById(R.id.waitlist_recyclerview);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -122,9 +94,9 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(mRecyclerView);
         TextViewCount = (TextView) v.findViewById(R.id.count_tv);
 
-        updateCounter();
+        TextViewCount.setInputType(InputType.TYPE_NULL);
 
-        mView = v.findViewById(R.id.waitlist_recyclerview);
+        updateCounter();
 
         v.findViewById(R.id.waitlist_fab).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,109 +108,18 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
 
         final EditText nameEditText = (EditText) v.findViewById(R.id.client_name_edittext);
 
-        v.findViewById(R.id.addClient_btn_0).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(!TextUtils.isEmpty(client_count)){
-                    if(client_count.length() < 2)
-                        client_count = client_count + "0";
-                    updateCounter();
-                }
-            }
-        });
-        v.findViewById(R.id.addClient_btn_1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "1";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "2";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "3";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "4";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "5";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_6).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "6";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_7).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "7";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_8).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "8";
-                updateCounter();
-            }
-        });
-        v.findViewById(R.id.addClient_btn_9).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(client_count.length() < 2)
-                    client_count = client_count + "9";
-                updateCounter();
-            }
-        });
+        v.findViewById(R.id.addClient_btn_0).setOnClickListener(numericButtonListener(v, 0));
+        v.findViewById(R.id.addClient_btn_1).setOnClickListener(numericButtonListener(v, 1));
+        v.findViewById(R.id.addClient_btn_2).setOnClickListener(numericButtonListener(v, 2));
+        v.findViewById(R.id.addClient_btn_3).setOnClickListener(numericButtonListener(v, 3));
+        v.findViewById(R.id.addClient_btn_4).setOnClickListener(numericButtonListener(v, 4));
+        v.findViewById(R.id.addClient_btn_5).setOnClickListener(numericButtonListener(v, 5));
+        v.findViewById(R.id.addClient_btn_6).setOnClickListener(numericButtonListener(v, 6));
+        v.findViewById(R.id.addClient_btn_7).setOnClickListener(numericButtonListener(v, 7));
+        v.findViewById(R.id.addClient_btn_8).setOnClickListener(numericButtonListener(v, 8));
+        v.findViewById(R.id.addClient_btn_9).setOnClickListener(numericButtonListener(v, 9));
 
-        v.findViewById(R.id.addClient_btn_backspace).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                v.findViewById(R.id.count_tv).requestFocus();
-                if(!TextUtils.isEmpty(client_count)){
-                    client_count = removeLastChar(client_count);
-                }
-                updateCounter();
-            }
-        });
+        v.findViewById(R.id.addClient_btn_backspace).setOnClickListener(numericButtonListener(v, -1));
 
         ImageButton btn_done = (ImageButton) v.findViewById(R.id.addClient_btn_done);
 
@@ -274,6 +155,7 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
         v.findViewById(R.id.count_tv).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
+                hideKeyboard(getActivity());
                 v.findViewById(R.id.count_tv).requestFocus();
                 return true;
             }
@@ -281,6 +163,45 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
 
 
         return v;
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    private View.OnClickListener numericButtonListener(final View v, final int digit){
+
+        if(digit == -1){
+            return new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    v.findViewById(R.id.count_tv).requestFocus();
+                    if(!TextUtils.isEmpty(client_count)){
+                        client_count = removeLastChar(client_count);
+                    }
+                    updateCounter();
+                }
+            };
+        }
+
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                v.findViewById(R.id.count_tv).requestFocus();
+                if (!TextUtils.isEmpty(client_count) || digit != 0) {
+                    if (client_count.length() < 2)
+                        client_count = client_count + String.valueOf(digit);
+                    updateCounter();
+                }
+            }
+        };
     }
 
     public static String removeLastChar(String s) {
@@ -297,7 +218,6 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
         }
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(View view) {
         if (mListener != null) {
             mListener.onFragmentInteraction(view);
@@ -333,7 +253,7 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
             mAdapter.removeClient(viewHolder.getAdapterPosition());
 
             Snackbar snackbar = Snackbar
-                    .make(mView, name + " ha sido eliminado!", Snackbar.LENGTH_LONG);
+                    .make(mRecyclerView, name + " ha sido eliminado!", Snackbar.LENGTH_LONG);
             snackbar.setAction("DESHACER", new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
