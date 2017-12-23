@@ -1,8 +1,10 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.sqlite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.farolito.meseros.meserosfarolito.sqlite.WaitlistContract;
 
 /**
  * Created by Hector on 16/11/2017.

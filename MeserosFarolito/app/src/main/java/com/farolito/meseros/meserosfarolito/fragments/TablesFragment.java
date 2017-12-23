@@ -1,13 +1,11 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.fragments;
 
 import android.content.Context;
 import android.graphics.Point;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +14,8 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.TableLayout;
+
+import com.farolito.meseros.meserosfarolito.R;
 
 import java.lang.reflect.InvocationTargetException;
 

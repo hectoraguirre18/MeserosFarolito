@@ -1,4 +1,4 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.customClasses;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -16,6 +16,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.farolito.meseros.meserosfarolito.R;
+import com.farolito.meseros.meserosfarolito.sqlite.WaitlistDBHelper;
+import com.farolito.meseros.meserosfarolito.sqlite.WaitlistContract;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,26 +27,16 @@ import java.util.List;
  * Created by Hector on 16/11/2017.
  */
 
-public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolder> {
-
-    public static class Client {
-        String name;
-        int count;
-
-        public Client(String name_, int count_){
-            name = name_;
-            count = count_;
-        }
-    }
+public class WaitlistAdapter extends Adapter<WaitlistAdapter.waitlistViewHolder> {
 
     private Context mContext;
-    private WaitlistDBHelper mDbHelper;
+    private static WaitlistDBHelper mDbHelper;
 
     private List<Client> clients;
 
     private int lastPosition;
 
-    public Waitlist_adapter(Context context){
+    public WaitlistAdapter(Context context){
         mContext = context;
         mDbHelper = new WaitlistDBHelper(context);
         clients = new ArrayList<>();
@@ -55,7 +49,7 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
         public RelativeLayout viewBackground, viewForeground;
         public View container;
 
-        public waitlistViewHolder(View view) {
+        waitlistViewHolder(View view) {
             super(view);
             container = view;
             clientName = (TextView) view.findViewById(R.id.waitlist_clientName);
@@ -106,7 +100,7 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
     }
 
     @Override
-    public Waitlist_adapter.waitlistViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public WaitlistAdapter.waitlistViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.client_list_item, parent, false);
         return new waitlistViewHolder(itemView);
@@ -115,8 +109,8 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
     @Override
     public void onBindViewHolder(waitlistViewHolder holder, int position) {
         Client client = clients.get(position);
-        holder.clientCount.setText(""+client.count);
-        holder.clientName.setText(client.name);
+        holder.clientCount.setText(client.getCountAsString());
+        holder.clientName.setText(client.getName());
 
         setAnimation(holder.container, position);
     }
@@ -138,7 +132,7 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         String selection = WaitlistContract.WaitlistEntry.COLUMN_CLIENT_NAME + " = ?";
-        String[] selectionArgs = { client.name };
+        String[] selectionArgs = { client.getName() };
         db.delete(WaitlistContract.WaitlistEntry.WAITLIST_TABLE_NAME, selection, selectionArgs);
 
         notifyItemRemoved(position);
@@ -146,8 +140,8 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
 
     public void restoreClient(Client client, int position){
         clients.add(position, client);
-        int count = client.count;
-        String name = client.name;
+        int count = client.getCount();
+        String name = client.getName();
 
         Log.d("MyLog", name);
 
@@ -176,8 +170,8 @@ public class Waitlist_adapter extends Adapter<Waitlist_adapter.waitlistViewHolde
     public void insertClient(Client client, int position, RecyclerView.LayoutManager mLayoutManager){
         clients.add(position, client);
         mLayoutManager.scrollToPosition(clients.size() -1);
-        int count = client.count;
-        String name = client.name;
+        int count = client.getCount();
+        String name = client.getName();
 
         Log.d("MyLog", name);
 

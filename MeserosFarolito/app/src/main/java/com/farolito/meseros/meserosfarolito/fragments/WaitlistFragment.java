@@ -1,11 +1,8 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.fragments;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.net.sip.SipSession;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -16,18 +13,20 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputType;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.farolito.meseros.meserosfarolito.R;
+import com.farolito.meseros.meserosfarolito.customClasses.RecyclerItemTouchHelper;
+import com.farolito.meseros.meserosfarolito.customClasses.WaitlistAdapter;
+import com.farolito.meseros.meserosfarolito.customClasses.Client;
 
 import java.util.List;
 
@@ -38,11 +37,11 @@ import java.util.List;
  * {@link WaitlistFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener{
+public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener {
 
     RecyclerView.LayoutManager mLayoutManager;
 
-    private Waitlist_adapter mAdapter;
+    private WaitlistAdapter mAdapter;
 
     TextView TextViewCount;
 
@@ -77,7 +76,7 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
         final View v = inflater.inflate(R.layout.fragment_waitlist, container, false);
         mFocusThief = v.findViewById(R.id.focus_thief);
 
-        mAdapter = new Waitlist_adapter(getContext());
+        mAdapter = new WaitlistAdapter(getContext());
 
         mLayoutManager = new LinearLayoutManager(getContext());
 
@@ -145,7 +144,7 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
                     client_count = "";
                     updateCounter();
 
-                    Waitlist_adapter.Client client = new Waitlist_adapter.Client(name, count);
+                    Client client = new Client(name, count);
                     int position = mAdapter.getClients().size();
                     mAdapter.insertClient(client, position, mLayoutManager);
                 }
@@ -243,11 +242,11 @@ public class WaitlistFragment extends Fragment implements RecyclerItemTouchHelpe
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
-        if(viewHolder instanceof Waitlist_adapter.waitlistViewHolder){
-            List<Waitlist_adapter.Client> clients = mAdapter.getClients();
-            String name = clients.get(viewHolder.getAdapterPosition()).name;
+        if(viewHolder instanceof WaitlistAdapter.waitlistViewHolder){
+            List<Client> clients = mAdapter.getClients();
+            String name = clients.get(viewHolder.getAdapterPosition()).getName();
 
-            final Waitlist_adapter.Client deletedClient = clients.get(viewHolder.getAdapterPosition());
+            final Client deletedClient = clients.get(viewHolder.getAdapterPosition());
             final int deletedIndex = viewHolder.getAdapterPosition();
 
             mAdapter.removeClient(viewHolder.getAdapterPosition());

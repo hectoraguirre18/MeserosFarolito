@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:id="@+id/tables_main_layout"
     android:background="@android:color/white"
-    tools:context="com.farolito.meseros.meserosfarolito.TablesFragment">
+    tools:context="com.farolito.meseros.meserosfarolito.fragments.TablesFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,17 +23,17 @@
         <!-- Row 1 --> <TableRow>
 
 
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -43,17 +43,17 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
@@ -61,13 +61,13 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -77,13 +77,13 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -93,27 +93,27 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                     android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
@@ -123,41 +123,19 @@
         <!-- Row 2 --> <TableRow>
 
 
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:visibility="invisible"
-                android:clickable="false"/>
-            <View
-                android:layout_width="@dimen/wall_thickness"
-                android:layout_height="match_parent"
-                android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:visibility="invisible"
-                android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:visibility="invisible"
-                android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -167,13 +145,19 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:clickable="false"/>
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -183,13 +167,29 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-            <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:visibility="invisible"
                 android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:clickable="false"/>
+            <View
+                android:layout_width="@dimen/wall_thickness"
+                android:layout_height="match_parent"
+                android:background="@color/wall_color"/>
+            <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -197,31 +197,31 @@
                 android:layout_width="@dimen/wall_thickness"
                 android:layout_height="match_parent"
                 android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -233,19 +233,19 @@
         <!-- Row 3 --> <TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -255,17 +255,17 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -273,29 +273,13 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"
-            android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -305,31 +289,47 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"
+            android:background="@color/wall_color"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -341,17 +341,17 @@
         <!-- Row 4 --> <TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -359,35 +359,19 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"
-            android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -397,13 +381,29 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"
+            android:background="@color/wall_color"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -411,27 +411,27 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -441,19 +441,19 @@
         <!-- Row 5 --> <TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -463,17 +463,17 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
@@ -497,13 +497,13 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -513,31 +513,31 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -549,40 +549,19 @@
         <!-- Row 6 --> <TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -591,26 +570,47 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -619,31 +619,31 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -655,17 +655,17 @@
         <!-- Row 7 --> <TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -675,34 +675,19 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -711,13 +696,28 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -727,31 +727,31 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -782,19 +782,19 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -804,11 +804,11 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -817,11 +817,11 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -831,31 +831,31 @@
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"
             android:background="@color/wall_color"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -954,19 +954,19 @@
         <!-- Row 10 --><TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -975,76 +975,76 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1056,40 +1056,19 @@
         <!-- Row 11 --><TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1098,28 +1077,19 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1128,31 +1098,61 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1164,19 +1164,19 @@
         <!-- Row 12 --><TableRow>
 
 
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1185,43 +1185,43 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <View
-            android:layout_width="@dimen/wall_thickness"
-            android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="@dimen/wall_thickness"
+            android:layout_height="match_parent"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:clickable="false"/>
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -1230,31 +1230,31 @@
         <View
             android:layout_width="@dimen/wall_thickness"
             android:layout_height="match_parent"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
             android:clickable="false"/>
-        <com.farolito.meseros.meserosfarolito.TableButton
+        <com.farolito.meseros.meserosfarolito.customClasses.TableButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

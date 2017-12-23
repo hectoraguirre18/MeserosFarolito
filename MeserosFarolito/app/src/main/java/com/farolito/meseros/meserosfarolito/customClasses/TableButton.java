@@ -1,4 +1,4 @@
-package com.farolito.meseros.meserosfarolito;
+package com.farolito.meseros.meserosfarolito.customClasses;
 
 import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;
@@ -12,6 +12,8 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TableLayout;
+
+import com.farolito.meseros.meserosfarolito.R;
 
 /**
  * Created by Hector on 14/11/2017.
